@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_100"
+    tools:context=".ui.HomeActivity">
+
+    <include
+        android:id="@+id/search_toolbar"
+        layout="@layout/content_search_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/address_toolbar"
+        layout="@layout/content_address_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@android:color/black">
+
+            <FrameLayout
+                android:id="@+id/image_first_banner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_500"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="378dp"
+                    android:layout_height="169dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/home_banner"
+                    android:contentDescription="@string/home_banner_description" />
+            </FrameLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_shipping"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_margin="@dimen/margin_500"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_first_banner">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/image_shipping"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:backgroundTint="@color/grey_800"
+                        android:contentDescription="@string/truck_content_description"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_free_shipping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_200"
+                        android:text="@string/free_shipping"
+                        android:textColor="@color/grey_800"
+                        android:textSize="@dimen/default_font_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/image_shipping"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_free_shipping_continued"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_200"
+                        android:text="@string/free_shipping_continued"
+                        android:textColor="@color/grey_800"
+                        android:textSize="@dimen/default_font_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text_free_shipping"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_car"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginVertical="@dimen/margin_500"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintEnd_toStartOf="@+id/card_motorcycle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_shipping">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_car"
+                    android:backgroundTint="@color/grey_200"
+                    android:contentDescription="@string/car_description" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_200"
+                android:text="@string/car"
+                android:textColor="@color/grey_200"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/card_car"
+                app:layout_constraintStart_toStartOf="@+id/card_car"
+                app:layout_constraintTop_toBottomOf="@+id/card_car" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_motorcycle"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginVertical="@dimen/margin_500"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintBottom_toBottomOf="@id/card_car"
+                app:layout_constraintEnd_toStartOf="@+id/card_truck"
+                app:layout_constraintStart_toEndOf="@id/card_car"
+                app:layout_constraintTop_toTopOf="@id/card_car">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_motorcycle"
+                    android:backgroundTint="@color/grey_200"
+                    android:contentDescription="@string/moto_description" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_200"
+                android:text="@string/motorcycle"
+                android:textColor="@color/grey_200"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/card_motorcycle"
+                app:layout_constraintStart_toStartOf="@+id/card_motorcycle"
+                app:layout_constraintTop_toBottomOf="@+id/card_motorcycle" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_truck"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginVertical="@dimen/margin_500"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintBottom_toBottomOf="@id/card_motorcycle"
+                app:layout_constraintEnd_toStartOf="@+id/card_property"
+                app:layout_constraintStart_toEndOf="@id/card_motorcycle"
+                app:layout_constraintTop_toTopOf="@id/card_motorcycle">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_truck"
+                    android:backgroundTint="@color/grey_200"
+                    android:contentDescription="@string/truck_description" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_200"
+                android:text="@string/truck"
+                android:textColor="@color/grey_200"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/card_truck"
+                app:layout_constraintStart_toStartOf="@+id/card_truck"
+                app:layout_constraintTop_toBottomOf="@+id/card_truck" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_property"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginVertical="@dimen/margin_500"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintBottom_toBottomOf="@id/card_truck"
+                app:layout_constraintEnd_toStartOf="@+id/card_favorite"
+                app:layout_constraintStart_toEndOf="@id/card_truck"
+                app:layout_constraintTop_toTopOf="@id/card_truck">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/real_state"
+                    android:backgroundTint="@color/grey_200"
+                    android:contentDescription="@string/real_state_description" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_200"
+                android:text="@string/real_state"
+                android:textColor="@color/grey_200"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/card_property"
+                app:layout_constraintStart_toStartOf="@+id/card_property"
+                app:layout_constraintTop_toBottomOf="@+id/card_property" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_favorite"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginVertical="@dimen/margin_500"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintBottom_toBottomOf="@id/card_property"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/card_property"
+                app:layout_constraintTop_toTopOf="@id/card_property">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_favorite"
+                    android:backgroundTint="@color/grey_200"
+                    android:contentDescription="@string/favorite_description" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/text_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_200"
+                android:text="@string/favorites"
+                android:textColor="@color/grey_200"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/card_favorite"
+                app:layout_constraintStart_toStartOf="@+id/card_favorite"
+                app:layout_constraintTop_toBottomOf="@+id/card_favorite" />
+
+            <FrameLayout
+                android:id="@+id/image_second_banner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_500"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_favorite">
+
+                <ImageView
+                    android:layout_width="378dp"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/second_banner"
+                    android:contentDescription="@string/home_banner_description" />
+            </FrameLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_recently"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                android:layout_margin="@dimen/margin_500"
+                android:layout_marginBottom="400dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_second_banner">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/text_recently"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_500"
+                        android:text="@string/recent_view"
+                        android:textColor="@color/grey_800"
+                        android:textSize="@dimen/font_m"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_500"
+                        android:background="@color/grey_100"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_recently" />
+
+                    <ImageView
+                        android:id="@+id/image_product"
+                        android:layout_width="105dp"
+                        android:layout_height="97dp"
+                        android:layout_margin="@dimen/margin_200"
+                        android:background="@drawable/img_product_sneakers"
+                        android:contentDescription="@string/sneakers_description"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_bar" />
+
+                    <TextView
+                        android:id="@+id/text_product_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_description"
+                        android:textColor="@color/grey_800"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/image_product"
+                        app:layout_constraintTop_toTopOf="@+id/image_product" />
+
+                    <TextView
+                        android:id="@+id/text_product_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_price"
+                        android:textColor="@color/green_300"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/image_product"
+                        app:layout_constraintTop_toBottomOf="@id/text_product_description" />
+
+                    <TextView
+                        android:id="@+id/text_product_shipping_free"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/free_shipping"
+                        android:textColor="@color/grey_800"
+                        android:textSize="@dimen/default_font_size"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/image_product"
+                        app:layout_constraintTop_toBottomOf="@id/text_product_price" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

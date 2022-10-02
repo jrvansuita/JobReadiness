@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_xs">8sp</dimen>
+    <dimen name="default_font_size">12sp</dimen>
+    <dimen name="font_m">16sp</dimen>
+    <dimen name="font_l">20sp</dimen>
+    <dimen name="font_xl">24sp</dimen>
+    <dimen name="margin_xs">1dp</dimen>
+    <dimen name="margin_200">6dp</dimen>
+    <dimen name="margin_500">18dp</dimen>
+    <dimen name="margin_l">24dp</dimen>
+    <dimen name="margin_xl">32dp</dimen>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Job-Readiness</string>
+    <string name="ask">Perguntar</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="share">Compartilhar</string>
+    <string name="credit_simulation">Simular crédito</string>
+    <string name="call">Chamar</string>
+    <string name="reserve">Reservar</string>
+    <string name="car">Automóveis</string>
+    <string name="motorcycle">Motos</string>
+    <string name="truck">Caminhões</string>
+    <string name="real_state">Imóveis</string>
+    <string name="favorites">Favoritos</string>
+    <string name="share_on_ml">Buscar no Mercado Livre</string>
+    <string name="address_toolbar_content">Enviar a Igor Oliveira - Belém/PA</string>
+    <string name="free_shipping">Frete grátis</string>
+    <string name="free_shipping_continued">em milhares de produtos a partir de R$3.500,00</string>
+    <string name="recent_view">Visto recentemente</string>
+    <string name="product_description">Tenis Feminino Adidas Run Falcon 2.0 Original Preto</string>
+    <string name="product_price">R$ 13.999,00</string>
+    <string name="home_banner_description">Banner de produtos com descontos</string>
+    <string name="truck_content_description">Ícone de caminhão na cor verde</string>
+    <string name="car_description">Ícone de um carro na cor cinza claro</string>
+    <string name="moto_description">Ícone de moto na cor cinza claro</string>
+    <string name="truck_description">Ícone de caminhão na cor cinza claro</string>
+    <string name="real_state_description">Ícone de imóveis na cor cinza claro</string>
+    <string name="favorite_description">Ícone de coração na cor cinza claro</string>
+    <string name="chevron_description">Ícone de navegação na cor azul</string>
+    <string name="sneakers_description">Foto de um tênis na cor preta</string>
+    <string name="item_result">+2.000 resultados</string>
+    <string name="item_filters">Filtrar (1)</string>
+</resources>

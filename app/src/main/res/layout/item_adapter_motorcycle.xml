@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_500"
+        android:layout_marginTop="@dimen/margin_500"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_item_motorcycle_image"
+            android:layout_width="131dp"
+            android:layout_height="131dp"
+            android:background="@drawable/background_item"
+            android:contentDescription="Test"
+            android:src="@drawable/ic_motorcycle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frame_item_motorcycle"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="@dimen/margin_200"
+            android:layout_marginEnd="@dimen/margin_200"
+            android:background="@drawable/background_favorite"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/image_item_motorcycle_image"
+            app:layout_constraintTop_toTopOf="@+id/image_item_motorcycle_image">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/text_item_motorcycle_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_200"
+            android:textColor="@color/grey_800"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_item_motorcycle_image"
+            app:layout_constraintTop_toTopOf="@+id/image_item_motorcycle_image"
+            tools:text="Nome do item" />
+
+        <TextView
+            android:id="@+id/text_item_motorcycle_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_200"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/text_item_motorcycle_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_item_motorcycle_name"
+            tools:text="R$ 10.000,00" />
+
+        <TextView
+            android:id="@+id/text_item_motorcycle_description_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_200"
+            app:layout_constraintStart_toStartOf="@+id/text_item_motorcycle_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_item_motorcycle_price"
+            tools:text="Sport" />
+
+        <TextView
+            android:id="@+id/text_item_motorcycle_description_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_200"
+            android:textColor="@color/grey_200"
+            app:layout_constraintStart_toStartOf="@+id/text_item_motorcycle_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_item_motorcycle_description_one"
+            tools:text="Honda Motos Brasil" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_500"
+        android:background="@color/grey_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
