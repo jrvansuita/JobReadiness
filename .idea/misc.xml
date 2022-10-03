@@ -21,10 +21,13 @@
         <entry key="app/src/main/res/layout/app_and_w2_vambora_vambora_address_toolbar.xml" value="0.39791666666666664" />
         <entry key="app/src/main/res/layout/app_and_w2_vambora_vambora_car_card_layout.xml" value="0.35555555555555557" />
         <entry key="app/src/main/res/layout/content_address_toolbar.xml" value="0.35555555555555557" />
+        <entry key="app/src/main/res/layout/content_search_toolbar.xml" value="0.20572916666666666" />
         <entry key="app/src/main/res/layout/item_adapter_car.xml" value="0.35555555555555557" />
+        <entry key="app/src/main/res/layout/item_adapter_favorite.xml" value="0.20572916666666666" />
         <entry key="app/src/main/res/layout/item_adapter_motorcycle.xml" value="0.35555555555555557" />
         <entry key="app/src/main/res/layout/item_adapter_realstate.xml" value="0.35555555555555557" />
         <entry key="app/src/main/res/layout/item_adapter_truck.xml" value="0.35555555555555557" />
+        <entry key="app/src/main/res/layout/test.xml" value="0.35555555555555557" />
       </map>
     </option>
   </component>

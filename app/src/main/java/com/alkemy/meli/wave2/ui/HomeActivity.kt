@@ -15,11 +15,21 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+//        binding.test.addTextChangedListener {
+//            val typing = it.toString()
+//            //regexp
+//            binding.test.setError("Tem um telefone nesse texto")
+//        }
+
+        // biding.button.setOnCli
+        //
 
         setupListeners()
     }

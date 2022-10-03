@@ -11,11 +11,12 @@ import com.alkemy.meli.wave2.mock.ItemModel
 class CarListActivity : AppCompatActivity() {
 
     private val binding by lazy { ActivityCarListBinding.inflate(layoutInflater) }
-    private val dispatcher: (ItemModel) -> Unit = { dispatchNext() }
     private val adapter by lazy { CarListAdapter(ItemList.getCarList(), dispatcher) }
+    private val dispatcher: (ItemModel) -> Unit = { dispatchNext() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
         setContentView(binding.root)
         initRecyclerView()
     }

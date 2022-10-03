@@ -7,6 +7,18 @@
     android:background="@color/grey_100"
     tools:context=".ui.HomeActivity">
 
+
+    <EditText
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_favorite"
+        android:drawablePadding="50dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Tests" />
+
+
     <include
         android:id="@+id/search_toolbar"
         layout="@layout/content_search_toolbar"
