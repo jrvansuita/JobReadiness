@@ -2,7 +2,7 @@ package com.alkemy.meli.wave2.ui
 
 import androidx.lifecycle.ViewModel
 
-class HomeActivityViewModel : ViewModel() {
+class HomeViewModel : ViewModel() {
 
     //LiveData
 

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.alkemy.meli.wave2">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -23,45 +25,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".car.CarListActivity"
+            android:name=".car.ui.CarListActivity"
             android:exported="true"
             android:theme="@style/Theme.JobReadiness" />
         <activity
-            android:name=".car.CarDetailActivity"
+            android:name=".car.ui.CarDetailActivity"
             android:exported="true"
             android:theme="@style/Theme.JobReadiness" />
-        <activity
-            android:name=".truck.TruckListActivity"
-            android:exported="true"
-            android:theme="@style/Theme.JobReadiness" />
-        <activity
-            android:name=".truck.TruckDetailsActivity"
-            android:exported="true"
-            android:theme="@style/Theme.JobReadiness" />
-        <activity
-            android:name=".moto.MotorcycleListActivity"
-            android:exported="true"
-            android:theme="@style/Theme.JobReadiness" />
-        <activity
-            android:name=".moto.MotorcycleDetailActivity"
-            android:exported="true"
-            android:theme="@style/Theme.JobReadiness" />
-        <activity
-            android:name=".realstate.RealStateDetailActivity"
-            android:exported="true"
-            android:theme="@style/Theme.JobReadiness" />
-        <activity
-            android:name=".realstate.RealStateListActivity"
-            android:exported="true"
-            android:theme="@style/Theme.JobReadiness" />
-        <activity
-            android:name=".favorite.FavoriteDetailsActivity"
-            android:exported="true"
-            android:theme="@style/Theme.JobReadiness" />
-        <activity
-            android:name=".favorite.FavoriteListActivity"
-            android:exported="true"
-            android:theme="@style/Theme.JobReadiness" />
+
     </application>
 
 </manifest>

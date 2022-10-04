@@ -1,15 +1,15 @@
-package com.alkemy.meli.wave2.car
+package com.alkemy.meli.wave2.car.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.alkemy.meli.wave2.car.model.Car
 import com.alkemy.meli.wave2.databinding.ItemAdapterCarBinding
-import com.alkemy.meli.wave2.mock.ItemModel
 import com.squareup.picasso.Picasso
 
 class CarListAdapter(
-    private val data: List<ItemModel>,
-    val onSelect: (ItemModel) -> Unit
+    private val data: List<Car>,
+    val onSelect: (Car) -> Unit
 ) : RecyclerView.Adapter<CarListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -32,13 +32,16 @@ class CarListAdapter(
         private val binding: ItemAdapterCarBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(car: ItemModel) {
+        fun bind(car: Car) {
             binding.textItemCarName.text = car.name
             binding.textItemCarPrice.text = car.price
             binding.textItemCarDescriptionOne.text = car.descriptionOne
             binding.textItemCarDescriptionTwo.text = car.descriptionTwo
 
-            Picasso.get().load(car.image).into(binding.imageItemCarImage)
+            Picasso.get().isLoggingEnabled = true
+            
+            Picasso.get()
+                .load(car.image).into(binding.imageItemCarImage)
 
             itemView.setOnClickListener {
                 onSelect(car)
