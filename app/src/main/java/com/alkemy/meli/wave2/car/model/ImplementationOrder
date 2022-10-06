@@ -1,0 +1,10 @@
+
+
+1 - Defining the Model
+2 - Defining the global repository interface
+3 - Generic use case interfaces (single/multiple)
+4 - Specific use case implementations
+5 - Generic global Data Source interface
+6 - Specific Local and Remote Data source implementations
+7 - Specific Repository Implementation
+8 - Service interface for api calls

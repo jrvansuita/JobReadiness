@@ -6,25 +6,15 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alkemy.meli.wave2.car.adapter.CarListAdapter
-import com.alkemy.meli.wave2.car.viewmodel.CarListViewModel
+import com.alkemy.meli.wave2.car.model.entities.Car
+import com.alkemy.meli.wave2.car.ui.viewmodel.CarListViewModel
 import com.alkemy.meli.wave2.databinding.ActivityCarListBinding
 
 class CarListActivity : AppCompatActivity() {
 
     private val binding by lazy { ActivityCarListBinding.inflate(layoutInflater) }
 
-
     private val viewModel by viewModels<CarListViewModel>()
-
-//    private val viewModel: CarListViewModel by viewModels {
-//        CarListViewModelFactory(
-//            FindAllCarsUseCase(
-//                CarRepositoryImpl(
-//                    CarLocalDataSource()
-//                )
-//            )
-//        )
-//    }
 
     private lateinit var adapter: CarListAdapter
 
@@ -43,7 +33,7 @@ class CarListActivity : AppCompatActivity() {
     private fun setupViewModel() {
         viewModel.list.observe(this) {
             adapter = CarListAdapter(it) {
-                dispatchNext()
+                dispatchNext(it)
             }
 
             setupRecyclerView()
@@ -57,7 +47,10 @@ class CarListActivity : AppCompatActivity() {
         }
     }
 
-    private fun dispatchNext() {
-        startActivity(Intent(this, CarDetailActivity::class.java))
+    private fun dispatchNext(car: Car) {
+        startActivity(Intent(this, CarDetailActivity::class.java)
+            .apply {
+                putExtra("ID", car.id)
+            })
     }
 }

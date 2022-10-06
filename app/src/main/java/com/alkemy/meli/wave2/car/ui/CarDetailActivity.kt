@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
+import com.alkemy.meli.wave2.car.ui.viewmodel.CarDetailViewModel
 import com.alkemy.meli.wave2.databinding.ActivityCarDetailBinding
 
 class CarDetailActivity : AppCompatActivity() {
@@ -17,6 +18,8 @@ class CarDetailActivity : AppCompatActivity() {
 
         setListeners()
         setViewModelObservables()
+
+        val carID = intent.getIntExtra("ID", -1)
     }
 
     private fun setListeners() {

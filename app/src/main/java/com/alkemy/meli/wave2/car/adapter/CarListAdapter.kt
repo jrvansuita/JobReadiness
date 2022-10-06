@@ -3,7 +3,7 @@ package com.alkemy.meli.wave2.car.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.alkemy.meli.wave2.car.model.Car
+import com.alkemy.meli.wave2.car.model.entities.Car
 import com.alkemy.meli.wave2.databinding.ItemAdapterCarBinding
 import com.squareup.picasso.Picasso
 
@@ -39,7 +39,7 @@ class CarListAdapter(
             binding.textItemCarDescriptionTwo.text = car.descriptionTwo
 
             Picasso.get().isLoggingEnabled = true
-            
+
             Picasso.get()
                 .load(car.image).into(binding.imageItemCarImage)
 

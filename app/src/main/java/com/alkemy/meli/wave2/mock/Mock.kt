@@ -1,6 +1,6 @@
 package com.alkemy.meli.wave2.mock
 
-import com.alkemy.meli.wave2.car.model.Car
+import com.alkemy.meli.wave2.car.model.entities.Car
 
 fun getMockedCars() =
     listOf(
