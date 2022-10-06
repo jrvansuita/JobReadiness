@@ -1,6 +1,6 @@
 package com.alkemy.meli.wave2.car.usecase
 
-import com.alkemy.meli.wave2.car.model.Car
+import com.alkemy.meli.wave2.car.model.entities.Car
 import com.alkemy.meli.wave2.car.repository.CarRepository
 
 

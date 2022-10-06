@@ -1,4 +1,4 @@
-package com.alkemy.meli.wave2.car.viewmodel
+package com.alkemy.meli.wave2.car.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

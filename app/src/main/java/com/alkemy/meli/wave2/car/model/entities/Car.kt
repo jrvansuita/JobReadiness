@@ -1,4 +1,4 @@
-package com.alkemy.meli.wave2.car.model
+package com.alkemy.meli.wave2.car.model.entities
 
 data class Car(
     val id: Int,

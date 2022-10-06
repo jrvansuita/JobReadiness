@@ -1,6 +1,6 @@
 package com.alkemy.meli.wave2.car.service
 
-import com.alkemy.meli.wave2.car.model.Car
+import com.alkemy.meli.wave2.car.model.entities.Car
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

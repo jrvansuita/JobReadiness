@@ -1,4 +1,4 @@
-package com.alkemy.meli.wave2.car.ui
+package com.alkemy.meli.wave2.car.ui.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
