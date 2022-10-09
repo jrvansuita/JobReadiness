@@ -30,4 +30,7 @@
     <string name="sneakers_description">Foto de um tênis na cor preta</string>
     <string name="item_result">+2.000 resultados</string>
     <string name="item_filters">Filtrar (1)</string>
+    <string name="perguntar">Perguntar</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="escreva_sua_pergunta">Escreva sua pergunta</string>
 </resources>

@@ -17,7 +17,7 @@ class TextChangedListener : Activity() {
         binding = ActivityCarDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.editText.addTextChangedListener {
+        binding.askTextField.addTextChangedListener {
             Log.v("MUDOU", it.toString())
         }
     }

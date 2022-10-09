@@ -3,9 +3,9 @@ package com.alkemy.meli.wave2.car.ui
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.addTextChangedListener
 import com.alkemy.meli.wave2.car.ui.viewmodel.CarDetailViewModel
 import com.alkemy.meli.wave2.databinding.ActivityCarDetailBinding
+import com.squareup.picasso.Picasso
 
 class CarDetailActivity : AppCompatActivity() {
 
@@ -18,32 +18,40 @@ class CarDetailActivity : AppCompatActivity() {
 
         setListeners()
         setViewModelObservables()
+        startScope()
+    }
 
+    private fun startScope() {
         val carID = intent.getIntExtra("ID", -1)
+        viewModel.findCar(carID)
     }
 
     private fun setListeners() {
-        binding.editText.addTextChangedListener { edit ->
-            viewModel.checkEditTextValue(edit.toString())
-        }
-
-        //Or
-
-        binding.button.setOnClickListener {
-            viewModel.checkEditTextValue(binding.editText.text.toString())
+        binding.buttonQuestion.setOnClickListener {
+            viewModel.checkEditTextValue(binding.askTextField.text.toString())
         }
     }
 
     private fun setViewModelObservables() {
-        viewModel.result.observe(this) {
+        viewModel.ask.observe(this) {
             when (it) {
                 is CarDetailViewModel.Result.Success -> {
                     //Mandar pro proximo passo
                 }
                 is CarDetailViewModel.Result.Error -> {
-                    binding.editText.error = it.msg
+                    binding.askTextField.error = it.msg
                 }
             }
+        }
+
+        viewModel.car.observe(this) {
+            it?.let {
+                Picasso.get().load(it.image).into(binding.imageProduct)
+                binding.textTitle.text = it.name
+                binding.priceText.text = it.price
+                binding.textDescriptionContent.text = it.descriptionOne
+            }
+
         }
     }
 
