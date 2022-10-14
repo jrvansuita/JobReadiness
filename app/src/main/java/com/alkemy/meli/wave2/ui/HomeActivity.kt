@@ -9,26 +9,26 @@ import kotlin.reflect.KClass
 
 class HomeActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHomeBinding
+	private lateinit var binding: ActivityHomeBinding
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
 
-        binding = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+		binding = ActivityHomeBinding.inflate(layoutInflater)
+		setContentView(binding.root)
 
-        setupListeners()
-    }
+		setupListeners()
+	}
 
 
-    private fun setupListeners() {
-        binding.cardCar.setOnClickListener {
-            dispatchTo(CarListActivity::class)
-        }
-    }
+	private fun setupListeners() {
+		binding.cardCar.setOnClickListener {
+			dispatchTo(CarListActivity::class)
+		}
+	}
 
-    private fun dispatchTo(activity: KClass<*>) {
-        startActivity(Intent(this, activity.java))
-    }
+	private fun dispatchTo(activity: KClass<*>) {
+		startActivity(Intent(this, activity.java))
+	}
 }
