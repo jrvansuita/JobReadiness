@@ -33,4 +33,8 @@
     <string name="perguntar">Perguntar</string>
     <string name="favoritos">Favoritos</string>
     <string name="escreva_sua_pergunta">Escreva sua pergunta</string>
+
+    <string name="empty_question_error">Você deve completar a pergunta antes de enviá-la</string>
+    <string name="phone_on_question_error">Não é permitido escrever números de telefone</string>
+    <string name="email_on_question_error">Não é permitido escrever endereços de e-mail</string>
 </resources>

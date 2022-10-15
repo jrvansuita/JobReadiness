@@ -23,7 +23,7 @@ class CarDetailViewModel : ViewModel() {
 	//Local Data Source
 	private val localDataSource = CarLocalDataSourceImpl()
 
-	private val dataSource = remoteDataSource //localDataSource
+	private val dataSource = localDataSource // remoteDataSource
 
 	private val useCase by lazy {
 		FindOneCarUseCaseImpl(
@@ -50,17 +50,27 @@ class CarDetailViewModel : ViewModel() {
 
 		val validator = TextInputValidator()
 
-		if (text.isEmpty()) {
-			mutableAskResult.postValue(Result.Error("Você deve completar a pergunta antes de enviá-la"))
-		} else if (validator.hasPhone(text)) {
-			mutableAskResult.postValue(Result.Error("Não é permitido escrever números de telefone"))
+		val result = if (validator.hasPhone(text)) {
+			ErrorTypes.Phone
 		} else if (validator.hasEmail(text)) {
-			mutableAskResult.postValue(Result.Error("Não é permitido escrever endereços de e-mail"))
+			ErrorTypes.Email
+		} else if (text.isEmpty()) {
+			ErrorTypes.Empty
+		} else {
+			null
+		}
+
+		result?.let {
+			mutableAskResult.postValue(Result.Error(it))
 		}
 	}
 
 	sealed class Result {
 		object Success : Result()
-		class Error(val msg: String) : Result()
+		class Error(val type: ErrorTypes = ErrorTypes.Empty) : Result()
+	}
+
+	enum class ErrorTypes {
+		Empty, Email, Phone
 	}
 }

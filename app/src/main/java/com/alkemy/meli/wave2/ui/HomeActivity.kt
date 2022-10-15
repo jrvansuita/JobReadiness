@@ -1,13 +1,13 @@
 package com.alkemy.meli.wave2.ui
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.alkemy.meli.wave2.car.ui.CarListActivity
 import com.alkemy.meli.wave2.databinding.ActivityHomeBinding
 import kotlin.reflect.KClass
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : Activity() {
 
 	private lateinit var binding: ActivityHomeBinding
 
