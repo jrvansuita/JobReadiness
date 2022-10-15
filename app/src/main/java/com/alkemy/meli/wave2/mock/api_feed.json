@@ -1,0 +1,26 @@
+[
+  {
+    "id": "10",
+    "name": "Hilux SW4 2022",
+    "price": 380000,
+    "image": "https://i.snipboard.io/wnY0gH.jpg",
+    "descriptionOne": "SUV",
+    "descriptionTwo": "Sport"
+  },
+  {
+    "id": "20",
+    "name": "Fiat Strada Volcano 2022",
+    "price": 110000,
+    "image": "https://i.snipboard.io/unPkIq.jpg",
+    "descriptionOne": "Pickup",
+    "descriptionTwo": "Util"
+  },
+  {
+    "id": "30",
+    "name": "HB20 2021",
+    "price": 88000,
+    "image": "https://i.snipboard.io/2jTxHG.jpg",
+    "descriptionOne": "Hatch",
+    "descriptionTwo": "Comum"
+  }
+]
