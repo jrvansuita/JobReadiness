@@ -1,0 +1,11 @@
+ -- String Test
+   -- Valid Input
+   -- Not Valid Input
+   -- Empty
+   -- Null
+
+ -- Tests Scope
+   -- Given - Dado certo valor
+   -- When - Executao certa funcão
+   -- Then - O resultado esperado é validado
+

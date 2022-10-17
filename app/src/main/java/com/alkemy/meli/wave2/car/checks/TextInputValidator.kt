@@ -3,7 +3,7 @@ package com.alkemy.meli.wave2.car.checks
 class TextInputValidator {
 
 	companion object {
-		private var EMAIL_PATTERN = Regex("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+")
+		private var EMAIL_PATTERN = Regex("[Z0-9._-]+@[a-z]+\\.+[a-z]+")
 		private var PHONE_PATTERN = Regex("[0-9]{5}")
 	}
 
