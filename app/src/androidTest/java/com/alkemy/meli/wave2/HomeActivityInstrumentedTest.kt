@@ -36,14 +36,17 @@ class HomeActivityInstrumentedTest {
 
 	@Test
 	fun checkIfFreeShippingIsShowing() {
-		onView(withId(R.id.text_free_shipping_continued))
-			.check(matches(withText(R.string.free_shipping_continued)))
+		onView(withId(R.id.text_free_shipping_continued)).check(matches(withText(R.string.free_shipping_continued)))
+
+
 	}
 
 	@Test
 	fun checkIfProductDescriptionIsShowing() {
 		onView(withId(R.id.text_product_description))
 			.check(matches(withText(containsString("Tenis Feminino Adidas Run Falcon 2.0 Original Preto"))))
+
+
 	}
 
 	@After
